@@ -1,0 +1,224 @@
+
+    <!-- <div class="container mt-5">
+      <h1>Create Your Resume</h1>
+      <div [class.hidden]="submitted">
+      <form (ngSubmit)="onSubmit()" #resumeForm="ngForm" class="needs-validation" novalidate>
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" class="form-control" required [(ngModel)]="resume.name" name="name">
+        </div>
+        <div class="form-group">
+          <label for="jobTitle">Job Title:</label>
+          <input type="text" id="jobTitle" class="form-control" required [(ngModel)]="resume.jobTitle" name="jobTitle">
+        </div>
+        <div class="form-group">
+          <label for="profile">Profile:</label>
+          <textarea id="profile" class="form-control" required [(ngModel)]="resume.profile" name="profile"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="experience">Experience:</label>
+          <textarea id="experience" class="form-control" required [(ngModel)]="resume.experience" name="experience"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="education">Education:</label>
+          <textarea id="education" class="form-control" required [(ngModel)]="resume.education" name="education"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="location">Location:</label>
+          <input type="text" id="location" class="form-control" required [(ngModel)]="resume.location" name="location">
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone:</label>
+          <input type="text" id="phone" class="form-control" required [(ngModel)]="resume.phone" name="phone">
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" class="form-control" required [(ngModel)]="resume.email" name="email">
+        </div>
+        <div class="form-group">
+          <label for="website">Website:</label>
+          <input type="text" id="website" class="form-control" [(ngModel)]="resume.website" name="website">
+        </div>
+        <div class="form-group">
+          <label for="skills">Skills:</label>
+          <input type="text" id="skills" class="form-control" [(ngModel)]="resume.skills" name="skills">
+        </div>
+        <div class="form-group">
+          <label for="interest">Interest:</label>
+          <input type="text" id="interest" class="form-control" [(ngModel)]="resume.interest" name="interest">
+        </div>
+        <div class="form-group">
+          <label for="language">Language:</label>
+          <input type="text" id="language" class="form-control" [(ngModel)]="resume.language" name="language">
+        </div>
+        <button type="submit" class="btn btn-primary">Generate Resume</button>
+      </form>
+    </div> -->
+
+    <div class="container mt-5">
+      <h1 class="text-center mb-4">Create Your Resume</h1>
+      <div [class.hidden]="submitted">
+        <form (ngSubmit)="onSubmit()" #resumeForm="ngForm" class="needs-validation" novalidate>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group mb-3">
+                <label for="name" class="form-label">Name:</label>
+                <input type="text" id="name" class="form-control" required [(ngModel)]="resume.name" name="name">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group mb-3">
+                <label for="jobTitle" class="form-label">Job Title:</label>
+                <input type="text" id="jobTitle" class="form-control" required [(ngModel)]="resume.jobTitle" name="jobTitle">
+              </div>
+            </div>
+          </div>
+          <div class="form-group mb-3">
+            <label for="profile" class="form-label">Profile:</label>
+            <textarea id="profile" class="form-control" required [(ngModel)]="resume.profile" name="profile" rows="3"></textarea>
+          </div>
+          <div class="form-group mb-3">
+            <label for="experience" class="form-label">Experience:</label>
+            <textarea id="experience" class="form-control" required [(ngModel)]="resume.experience" name="experience" rows="3"></textarea>
+          </div>
+          <div class="form-group mb-3">
+            <label for="education" class="form-label">Education:</label>
+            <textarea id="education" class="form-control" required [(ngModel)]="resume.education" name="education" rows="3"></textarea>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group mb-3">
+                <label for="location" class="form-label">Location:</label>
+                <input type="text" id="location" class="form-control" required [(ngModel)]="resume.location" name="location">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group mb-3">
+                <label for="phone" class="form-label">Phone:</label>
+                <input type="text" id="phone" class="form-control" required [(ngModel)]="resume.phone" name="phone">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group mb-3">
+                <label for="email" class="form-label">Email:</label>
+                <input type="email" id="email" class="form-control" required [(ngModel)]="resume.email" name="email">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group mb-3">
+                <label for="website" class="form-label">Website:</label>
+                <input type="text" id="website" class="form-control" [(ngModel)]="resume.website" name="website">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group mb-3">
+                <label for="skills" class="form-label">Skills:</label>
+                <input type="text" id="skills" class="form-control" [(ngModel)]="resume.skills" name="skills">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group mb-3">
+                <label for="interest" class="form-label">Interest:</label>
+                <input type="text" id="interest" class="form-control" [(ngModel)]="resume.interest" name="interest">
+              </div>
+            </div>
+          </div>
+          <div class="form-group mb-3">
+            <label for="language" class="form-label">Language:</label>
+            <input type="text" id="language" class="form-control" [(ngModel)]="resume.language" name="language">
+          </div>
+          <div class="text-center">
+            <button type="submit" class="btn btn-primary">Generate Resume</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+
+    <!-- The resume template -->
+      <div class="cv" [class.hidden]="!submitted">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-8">
+            <header class="cv-header">
+              <img class="cv-header__img" src="https://selcukcura.com/wp-content/themes/selfolio-2018/img/profile-img/selcuk-cura-young.jpg" data-zoomable>
+              <div class="cv-header__text-container">
+                <h1 class="cv-header__name">{{resume.name}}</h1>
+                <p class="cv-header__job-title">{{resume.jobTitle}}</p>
+              </div>
+            </header>
+            <section class="cv-section">
+              <h2 class="cv-section__title"><i class="fas fa-user fa-fw"></i> Profile</h2>
+              <div class="cv-section__wrapper">
+                <p class="cv-section__description">{{resume.profile}}</p>
+              </div>
+            </section>
+         <section class="cv-section">
+           <h2 class="cv-section__title"><i class="fas fa-briefcase fa-fw"></i> Experience</h2>
+             <div class="cv-section__wrapper">
+               <p class="cv-section__description">{{resume.experience}}</p>
+        </div>
+        </section>
+        <section class="cv-section">
+          <h2 class="cv-section__title"><i class="fas fa-graduation-cap fa-fw"></i> Education</h2>
+            <div class="cv-section__wrapper">
+              <p class="cv-section__description">{{resume.education}}</p>
+       </div>
+       </section>
+       <section class="cv-section">
+        <h2 class="cv-section__title"><i class="fas fa-graduation-cap fa-fw"></i> Education</h2>
+          <div class="cv-section__wrapper">
+            <p class="cv-section__description">{{resume.education}}</p>
+     </div>
+     </section>
+          </div>
+          <aside class="col-md-4 cv-sidebar">
+            <section class="cv-sidebar-section">
+              <h2 class="cv-sidebar-section__title">Details</h2>
+              <p class="cv-sidebar-section__description">
+                {{resume.location}} <br>
+                <a href="tel:{{resume.phone}}" rel="nofollow">{{resume.phone}}</a> <br>
+                <a href="mailto:{{resume.email}}" rel="nofollow">{{resume.email}}</a> <br>
+                <a href="{{resume.website}}" target="_blank">{{resume.website}}</a>
+              </p>
+            </section>
+            <section class="cv-section">
+              <h2 class="cv-section__title"> Skills</h2>
+                <div class="cv-section__wrapper">
+                  <p class="cv-section__description">{{resume.skills}}</p>
+           </div>
+           </section>
+           <section class="cv-section">
+            <h2 class="cv-section__title"> Tools</h2>
+              <div class="cv-section__wrapper">
+                <p class="cv-section__description">{{resume.tools}}</p>
+         </div>
+         </section>
+         <section class="cv-section">
+          <h2 class="cv-section__title"> Interest</h2>
+            <div class="cv-section__wrapper">
+              <p class="cv-section__description">{{resume.interest}}</p>
+       </div>
+       </section>
+       <section class="cv-section">
+        <h2 class="cv-section__title"> Skills</h2>
+          <div class="cv-section__wrapper">
+            <p class="cv-section__description">{{resume.skills}}</p>
+     </div>
+     </section>
+     <section class="cv-section">
+      <h2 class="cv-section__title"> Languages</h2>
+        <div class="cv-section__wrapper">
+          <p class="cv-section__description">{{resume.language}}</p>
+   </div>
+   </section>
+          </aside>
+        </div>
+        <button class="btn btn-primary" (click)="editResume()">Edit</button>
+      </div>
+    </div>
+
